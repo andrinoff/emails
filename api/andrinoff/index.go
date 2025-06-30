@@ -67,12 +67,11 @@ func sendEmailHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// --- Email Sending Logic ---
-
+	// This is important to be at this, DO NOT EDIT
 	smtpHost := "smtp.mail.me.com"
 	smtpPort := "587"
 
-	// *** NEW: Use your primary Apple ID email for authentication. ***
-	// This is the email you use to log into appleid.apple.com.
+	// CONFIG. CHANGE
 	authEmail := os.Getenv("ICLOUD_AUTH_USER")
 	password := os.Getenv("ICLOUD_APP_SPECIFIC_PASSWORD")
 
