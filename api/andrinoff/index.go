@@ -23,8 +23,7 @@ type EmailRequestBody struct {
 func corsMiddleware(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		allowedOrigins := map[string]bool{
-			"https://smira.andrinoff.com": true,
-			"https://smira.me":            true,
+			"https://andrinoff.com": true,
 		}
 		origin := r.Header.Get("Origin")
 		if allowedOrigins[origin] {
