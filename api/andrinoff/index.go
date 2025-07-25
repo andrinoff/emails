@@ -1,6 +1,3 @@
-// Place this file in the `api` directory of your Vercel project.
-// For example: /api/sendmail.go
-
 package handler
 
 import (
@@ -77,7 +74,7 @@ func sendEmailHandler(w http.ResponseWriter, r *http.Request) {
 	// The address the email is sent FROM. This must be a verified custom domain alias.
 	fromAddress := "no-reply@andrinoff.com"
 	// The address to receive the contact form submission.
-	toAddress := "realandrinoff@gmail.com"
+	toAddress := "business@andrinoff.com"
 
 	// Add a log to help debug which user is being used for auth.
 	log.Printf("Attempting SMTP authentication with user: %s", authEmail)
