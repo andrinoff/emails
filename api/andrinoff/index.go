@@ -86,8 +86,8 @@ func sendEmailHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Construct the email message with a Reply-To header.
-	subject := "New Contact Form Submission from " + requestBody.Name
-	emailBody := fmt.Sprintf("From: %s <%s>\r\n", "Andrey Smirnov Portfolio", fromAddress) +
+	subject := "New message from " + requestBody.Name
+	emailBody := fmt.Sprintf("From: %s <%s>\r\n", requestBody.Name, fromAddress) +
 		fmt.Sprintf("To: %s\r\n", toAddress) +
 		fmt.Sprintf("Reply-To: %s <%s>\r\n", requestBody.Name, requestBody.Email) + // Allows you to reply directly to the user.
 		fmt.Sprintf("Subject: %s\r\n", subject) +
